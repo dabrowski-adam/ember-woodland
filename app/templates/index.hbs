@@ -1,2 +1,16 @@
-Hello from index!
-{{#link-to "orders" class="orders-link"}}Orders{{/link-to}}
+<div class="card">
+    <h1>Order Today!</h1>
+    <p class="card-content">Our online store helps...</p>
+    {{#link-to "orders" class="orders-link"}}Order Today!{{/link-to}}
+</div>
+
+<div class="grid group">
+    {{#each model as |product|}}
+        <div class="product-media">
+            <img src="{{product.imageUrl}}" alt="" />
+        </div>
+        <div class="product-content">
+            <h2>{{product.title}}: <strong>{{product.price}}</strong></h2>
+        </div>
+    {{/each}}
+</div>
